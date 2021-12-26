@@ -1,0 +1,1 @@
+Kök dizinde iken "mingw32-make" komutu ile programı çalıştırınız. Veri.txt kök dizinde olmalıdır.
