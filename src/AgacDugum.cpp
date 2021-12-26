@@ -1,9 +1,9 @@
 /**
 * @file AgacDugum.cpp
-* @description Bir doğru kuyruğunu tutan AVL ağacı düğümü uygulaması.
+* @description Çift yönlü bağlı liste için bir düğüm uygulaması.
 * @course Dersi aldığınız eğitim türü ve grup
 * @assignment 2. Ödev
-* @date 12.12.2021
+* @date 13.11.2021
 * @author Gruptakilerin yazar adları ve mail adresleri
 */
 
@@ -24,7 +24,7 @@ AgacDugum::AgacDugum(const DogruKuyrugu &veri, AgacDugum *sol, AgacDugum *sag)
     this->veri = veri;
 }
 
-DogruKuyrugu AgacDugum::VeriyiAl() const
+const DogruKuyrugu AgacDugum::VeriyiAl() const
 {
     return veri;
 }

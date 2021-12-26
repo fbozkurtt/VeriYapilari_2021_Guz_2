@@ -27,6 +27,7 @@ AgacDugum *AVLAgac::AraVeEkle(AgacDugum *alt_Dugum, const DogruKuyrugu &yeni)
 	if (alt_Dugum == NULL)
 	{
 		alt_Dugum = new AgacDugum(yeni);
+		//std::cout<<DogruKuyrugu::StringeCevir(alt_Dugum->VeriyiAl()) + "\n";
 	}
 	else if (yeni < alt_Dugum->VeriyiAl() || yeni == alt_Dugum->VeriyiAl())
 	{
@@ -92,10 +93,11 @@ std::string AVLAgac::Postorder(AgacDugum *alt_Dugum) const
 	std::string s = "";
 	if (alt_Dugum != NULL)
 	{
-		s += Postorder(alt_Dugum->sol);
-		s += Postorder(alt_Dugum->sag);
-		s += alt_Dugum->VeriyiAl().MetniAl();
-		s += "\n";
+		Postorder(alt_Dugum->sol);
+		Postorder(alt_Dugum->sag);
+		std::cout<<DogruKuyrugu::StringeCevir(alt_Dugum->VeriyiAl()) + "\n";
+		// s += "\n";
+		// std::cout << s;
 	}
 	return s;
 }
@@ -173,7 +175,7 @@ int AVLAgac::Yukseklik() const
 	return Yukseklik(kok);
 }
 
-std::string AVLAgac::PostorderOlarakStringeCevir()
+std::string AVLAgac::PostorderOlarakStringeCevirVeTemizle()
 {
 	return Postorder(kok);
 }

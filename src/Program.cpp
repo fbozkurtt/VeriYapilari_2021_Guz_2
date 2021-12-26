@@ -1,9 +1,9 @@
 /**
-* @file Program.cpp
-* @description Programın giriş noktası. Yeni bir agac oluşturur ve bunu ekrana yazdırır.
+* @file program.cpp
+* @description Programın giriş noktası. Yeni bir listle oluşturur ve bunu ekrana yazdırır.
 * @course Dersi aldığınız eğitim türü ve grup
-* @assignment 2. Ödev
-* @date 26.12.2021
+* @assignment 1. Ödev
+* @date 13.11.2021
 * @author Gruptakilerin yazar adları ve mail adresleri
 */
 
@@ -44,11 +44,13 @@ int main()
 
         while (getline(girdiDosyasi, satir))
         {
-            auto kuyruk = DogruKuyrugu::Ayristir(satir); // Satiri kuyruga cevir. Ya da 'parse' et.
-            agac->Ekle(kuyruk); // Olusan kuyrugu agaca ekle.
+            auto kuyruk = DogruKuyrugu::Ayristir(satir);
+
+            //cout << DogruKuyrugu::StringeCevir(kuyruk) << endl;
+            agac->Ekle(kuyruk);
         }
         girdiDosyasi.close();
-        cout << agac->PostorderOlarakStringeCevir(); // Agaci postorder olacak sekilde ekrana yazdir.
+        agac->PostorderOlarakStringeCevirVeTemizle();
     }
 
     catch (const char *err)

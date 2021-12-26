@@ -79,8 +79,6 @@ void DogruKuyrugu::Ekle(const UcBoyutluNokta &nokta)
         arka->sonraki = yeniDugum;
         arka = yeniDugum;
     }
-
-    //metin = StringeCevir(*this);
 }
 
 void DogruKuyrugu::MinimumuCikar()
@@ -121,16 +119,6 @@ const UcBoyutluNokta DogruKuyrugu::MinimumuGoster() const
 long DogruKuyrugu::ToplamUzunluguAl() const
 {
     return ToplamUzunluk;
-}
-
-std::string DogruKuyrugu::MetniAl() const
-{
-    return metin;
-}
-
-void DogruKuyrugu::MetniDegistir(std::string metin)
-{
-    this->metin = metin;
 }
 
 std::string DogruKuyrugu::StringeCevir(DogruKuyrugu kuyruk)
@@ -187,7 +175,6 @@ DogruKuyrugu DogruKuyrugu::Ayristir(std::string s)
     if (sayac != 1)
         throw "Sayi adedi ucun katlari olmali!";
 
-    kuyruk.MetniDegistir(DogruKuyrugu::StringeCevir(kuyruk));
     return kuyruk;
 }
 
@@ -231,7 +218,7 @@ DogruKuyrugu::~DogruKuyrugu()
 
     if (on != NULL)
         delete on;
-
+        
     if (arka != NULL)
         delete arka;
 }

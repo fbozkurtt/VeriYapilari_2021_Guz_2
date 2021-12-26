@@ -1,6 +1,6 @@
 /**
 * @file AVLAgac.cpp
-* @description Doğru kuyruklarını tutan bir AVL ağacı uygulaması.
+* @description Doğru kuyruklarını tutan bir öncelikli AVL ağacı uygulaması.
 * @course Dersi aldığınız eğitim türü ve grup
 * @assignment 2. Ödev
 * @date 12.12.2021
@@ -30,7 +30,7 @@ public:
 	bool BosMu() const;
 	void Ekle(const DogruKuyrugu &yeni);
 	void Temizle();
-	std::string PostorderOlarakStringeCevir();
+	std::string PostorderOlarakStringeCevirVeTemizle();
 	int Yukseklik() const;
 	~AVLAgac();
 };

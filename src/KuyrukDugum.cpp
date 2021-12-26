@@ -1,6 +1,6 @@
 /**
 * @file KuyrukDugum.cpp
-* @description Üç boyutlu uzaydaki bir noktayı tutan öncelikli kuyruk düğümü uygulaması.
+* @description Çift yönlü bağlı liste için bir düğüm uygulaması.
 * @course Dersi aldığınız eğitim türü ve grup
 * @assignment 2. Ödev
 * @date 13.11.2021

@@ -1,6 +1,6 @@
 /**
 * @file KuyrukDugum.hpp
-* @description Üç boyutlu uzaydaki bir noktayı tutan öncelikli kuyruk düğümü uygulaması.
+* @description Doğru kuyruğunu tutan bir AVL ağacı düğümü uygulaması.
 * @course Dersi aldığınız eğitim türü ve grup
 * @assignment 2. Ödev
 * @date 12.12.2021
