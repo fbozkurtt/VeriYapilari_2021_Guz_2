@@ -16,6 +16,7 @@
 class DogruKuyrugu
 {
 private:
+    std::string metin;
     KuyrukDugum *on;
     KuyrukDugum *arka;
     long ToplamUzunluk;
@@ -30,9 +31,11 @@ public:
     void MinimumuCikar();
     const UcBoyutluNokta MinimumuGoster() const;
     long ToplamUzunluguAl() const;
+    std::string MetniAl() const;
+    void MetniDegistir(std::string);
     void Temizle();
 
-    static DogruKuyrugu Ayristir(std::string);
+    static DogruKuyrugu Ayristir(std::string); // Parse
     static std::string StringeCevir(DogruKuyrugu);
 
     friend std::ostream &operator<<(std::ostream &, DogruKuyrugu &);
